@@ -52,7 +52,7 @@ class LTPLE_Leads_Settings {
 	
 	public function plugin_info(){
 		
-		$this->parent->settings->leadss['leads-plugin'] = array(
+		$this->parent->settings->addons['leads-plugin'] = array(
 			
 			'title' 		=> 'Leads Management Plugin',
 			'addon_link' 	=> 'https://github.com/rafasashi/live-template-editor-leads',
@@ -114,15 +114,12 @@ class LTPLE_Leads_Settings {
 	 */
 	public function add_menu_items () {
 		
-		//add menu in wordpress dashboard
-		/*
 		add_submenu_page(
 			'live-template-editor-client',
-			__( 'Leads test', $this->plugin->slug ),
-			__( 'Leads test', $this->plugin->slug ),
+			__( 'Leads Management', $this->plugin->slug ),
+			__( 'Leads Management', $this->plugin->slug ),
 			'edit_pages',
-			'edit.php?post_type=post'
+			'edit.php?post_type=lead'
 		);
-		*/
 	}
 }
